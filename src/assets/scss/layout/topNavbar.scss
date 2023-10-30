@@ -1,0 +1,126 @@
+@import "../variables";
+
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: calc(100% - 260px); /* subtract the width of the LeftSidebar */
+  margin-left: 260px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: $top-navbar-bg;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  .left {
+    display: flex;
+    position: relative;
+    align-items: center;
+    .search-icon-small-screen {
+      display: none;
+      font-size: 30px;
+      color: $Soft-blue;
+    }
+    .hamburger-icon {
+      font-size: 30px;
+      padding-right: 10px;
+      display: none;
+      cursor: pointer;
+    }
+    .search-box {
+      position: relative;
+      display: inline-block;
+      .search-input {
+        background-color: #eff2f7;
+      }
+      .search-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
+        font-size: 18px;
+        color: $Soft-blue;
+      }
+    }
+    .search-box-sm {
+      position: absolute;
+      left: 20px;
+      right: 6px;
+      top: 68px;
+      width: 200px;
+      background-color: $top-navbar-bg;
+      display: none;
+      .search-input {
+        background-color: #eff2f7;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .upgrade-button {
+      background-color: $cyan;
+      border: none;
+      font-size: 14px;
+    }
+    .userImage {
+      border-radius: 50%;
+      padding: 0 10px;
+      width: 74px;
+    }
+    .name {
+      font-size: 18px;
+    }
+    .email {
+      font-size: 15px;
+    }
+    .dropdown-name-email {
+      position: absolute;
+      right: 6px;
+      top: 68px;
+      background-color: $top-navbar-bg;
+      padding: 10px;
+      border-radius: 6px;
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .top-navbar {
+    width: calc(100% - 0px);
+    margin-left: 0px;
+    .left {
+      .hamburger-icon {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .top-navbar {
+    .left {
+      .search-box {
+        display: none;
+      }
+      .search-icon-small-screen {
+        display: block;
+      }
+      .search-box-sm {
+        display: block;
+      }
+    }
+    .right {
+      .name-email {
+        display: none;
+      }
+      .dropdown-name-email {
+        display: block;
+      }
+    }
+  }
+}

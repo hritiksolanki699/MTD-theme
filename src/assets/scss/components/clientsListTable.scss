@@ -1,0 +1,94 @@
+@import "../variables";
+
+.middle-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  .search-box {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    .search-input {
+      width: 100%;
+      background-color: #eff2f7;
+    }
+    .search-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      font-size: 18px;
+      color: $Soft-blue;
+    }
+  }
+}
+.gray-button {
+  font-size: 16px;
+  background-color: #efefef;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  span {
+    color: $Soft-blue;
+    font-size: 18px;
+  }
+}
+.add-client {
+  font-size: 16px;
+  background-color: $Soft-blue;
+  color: #efefef;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  span {
+    color: #efefef;
+    font-size: 18px;
+  }
+}
+.clients-list-table {
+  color: #6c757d;
+  thead {
+    background-color: #eef2f7;
+  }
+  .active-label {
+    background-color: #62b08b;
+    color: #ffffff;
+    border-radius: 6px;
+    text-align: center;
+  }
+}
+.bottom-div {
+  align-items: baseline;
+  .pagination-div {
+    display: flex;
+    justify-content: end;
+    .pagination-container {
+      .page-item {
+        color: $Soft-blue;
+        --bs-pagination-color: $Soft-blue !important;
+      }
+      .active > .page-link,
+      .page-link.active {
+        background-color: $Soft-blue !important;
+        border-color: $Soft-blue !important;
+      }
+    }
+  }
+}
+.a-to-z-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .middle-div {
+    justify-content: initial;
+  }
+}

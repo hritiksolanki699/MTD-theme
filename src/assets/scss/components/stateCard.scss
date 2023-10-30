@@ -1,0 +1,22 @@
+@import "../variables";
+
+.stats-card {
+  border: none;
+  .state-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $small-font;
+    font-weight: 600;
+    .stats-icon {
+      color: $cyan;
+      background-color: rgba(57, 175, 209, 0.2);
+      padding: 0 4px;
+    }
+  }
+  .stats-number {
+    font-weight: 600;
+    font-size: $large-font;
+    padding: 20px 0;
+  }
+}

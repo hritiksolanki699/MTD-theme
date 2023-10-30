@@ -1,0 +1,37 @@
+@import "../variables";
+
+.clients-list {
+  .list-title {
+    font-size: $small-font;
+    font-weight: 700;
+    .icon {
+      color: $Soft-blue;
+    }
+  }
+}
+
+
+
+
+
+.dashboard-table {
+  color: #6c757d;
+  thead {
+    background-color: #eef2f7;
+  }
+}
+
+.active-label {
+  background-color: #62b08b;
+  color: #ffffff;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.icon-soft-blue {
+  color: $Soft-blue;
+}
+
+
+@media only screen and (max-width: 768px) {
+}

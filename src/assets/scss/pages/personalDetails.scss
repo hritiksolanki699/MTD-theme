@@ -1,0 +1,40 @@
+@import "../variables";
+
+.profile-left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  .name {
+    color: $Soft-blue;
+    font-size: 20px;
+  }
+  .edit-profile-button {
+    background-color: $Soft-blue;
+    border: none;
+    font-size: 14px;
+  }
+  .image-div {
+    .img {
+      height: 120px;
+      width: 100px;
+      object-fit: contain;
+    }
+  }
+}
+
+.about {
+  padding: 20px;
+}
+
+.profile-desc{
+    font-size: 15px;
+}
+
+.icon-w-details{
+    font-size: 15px;
+    span{
+        color: $Soft-blue;
+    }
+}

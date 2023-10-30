@@ -1,0 +1,17 @@
+@import "../variables";
+
+.offcanvas {
+  --bs-offcanvas-bg: #313a46 !important;
+  width: 260px !important;
+}
+
+.offcanvas-body {
+  overflow-y: visible !important;
+}
+
+.logo-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 10px;
+}

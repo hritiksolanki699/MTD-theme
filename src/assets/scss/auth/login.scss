@@ -1,0 +1,129 @@
+@import "../variables";
+
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  height: 760px;
+  color: $text-color;
+}
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: $text-color;
+}
+
+.biger-cricle {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $login-biger-circle-color;
+  .small-cricle {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: 80%;
+    border-radius: 50%;
+    background-color: $login-smaller-circle-color;
+  }
+}
+
+.heading {
+  font-size: 36px;
+}
+
+.login-header {
+  background-color: $Soft-blue;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 65%;
+}
+
+.login-button {
+  width: 100%;
+  background-color: $cyan;
+  border: none;
+}
+
+.cancel-button {
+  width: 100%;
+  background-color: #fff;
+  color: $text-color;
+  border: 0.431583px solid $cyan;
+}
+
+.login-button:hover {
+  background-color: #e4ebfe;
+  color: #8391a2;
+  border: 0.431583px solid $cyan;
+}
+
+.cancel-button:hover {
+  background-color: #e4ebfe;
+  color: #8391a2;
+  border: 0.431583px solid $cyan;
+}
+
+.create-forgot-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  .text {
+    cursor: pointer;
+  }
+}
+
+.tems-service-div {
+  background-color: $login-smaller-circle-color;
+  span {
+    color: $Soft-blue;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .biger-cricle {
+    .small-cricle {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .login-container {
+    height: 660px;
+    margin-top: 40px;
+  }
+  .registration-container {
+    margin-top: 40px;
+  }
+  .biger-cricle {
+    width: 100%;
+    .small-cricle {
+      width: 100%;
+    }
+  }
+  .login-card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .heading {
+    font-size: 28px;
+  }
+}

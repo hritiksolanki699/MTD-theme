@@ -1,0 +1,28 @@
+@import "../variables";
+// $cyan
+
+.client-form-button-div {
+
+  gap: 20px;
+  align-items: center;
+  .client-button {
+    width: 100%;
+    font-weight: 700;
+  }
+  .cancel-button {
+    background-color: #ffffff;
+    color: #6c757d;
+    border: $cyan 1px solid !important;
+  }
+  .save-button {
+    background-color: $cyan;
+    border: $cyan 1px solid !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .client-form-button-div {
+    justify-content: initial;
+    gap: 0px;
+  }
+}

@@ -1,0 +1,62 @@
+@import "../variables";
+
+.license-expiry {
+  font-size: $medium-font;
+  font-weight: 700;
+  img {
+    padding-right: 10px;
+  }
+  span {
+    color: $cyan;
+  }
+}
+
+.upgrade-license {
+  font-size: $medium-font;
+  font-weight: 700;
+  img {
+    padding-right: 10px;
+  }
+}
+
+.parctice-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  align-items: center;
+  background-color: #eef2f7;
+  font-size: 25px;
+  font-weight: 700;
+  .icon {
+    color: $Soft-blue;
+  }
+}
+
+.details-rows {
+  font-size: $small-font;
+  span {
+    font-weight: 700;
+  }
+}
+
+.border-bottom-row {
+  border-bottom: 1px solid #d3d6d9;
+  margin-bottom: 8px;
+}
+
+.user-access-label-div{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  .border-bottom-col {
+    border-bottom: 1px solid #d3d6d9;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  .border-bottom-row {
+    border-bottom: none;
+    margin-bottom: 0px;
+  }
+}
