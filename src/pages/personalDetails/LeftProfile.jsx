@@ -14,7 +14,7 @@ const LeftProfile = () => {
             <Image className="img" src={profilePic} alt="profile img" />
           </div>
           <div className="name">Mark John</div>
-          <div>License No. : 25325136</div>
+          <div>Licence No. : 25325136</div>
           <div>
             <Link to="/edit-profile">
               <Button className="edit-profile-button">

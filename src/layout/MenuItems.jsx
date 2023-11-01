@@ -28,19 +28,21 @@ const MenuItems = ({ handleClose }) => {
   return (
     <SimpleBar style={{ height: "92vh" }}>
       <ListGroup className="menu">
-        <Link to="/dashboard">
-          <ListGroup.Item
-            className={isCurrentPath("/dashboard")}
-            onClick={handleClose}
-          >
+        <Link to="/">
+          <ListGroup.Item className={isCurrentPath("/")} onClick={handleClose}>
             <BsGrid1X2 />
             &nbsp; Dashboard
           </ListGroup.Item>
         </Link>
-        <ListGroup.Item className="menu-item">
-          <BsFileBarGraph />
-          &nbsp; Open Returns
-        </ListGroup.Item>
+        <Link to="/open-return">
+          <ListGroup.Item
+            className={isCurrentPath("/open-return")}
+            onClick={handleClose}
+          >
+            <BsFileBarGraph />
+            &nbsp; Open Returns
+          </ListGroup.Item>
+        </Link>
         <Link to="/clients">
           <ListGroup.Item
             className={isCurrentPath("/clients")}
@@ -50,14 +52,24 @@ const MenuItems = ({ handleClose }) => {
             &nbsp; Clients
           </ListGroup.Item>
         </Link>
-        <ListGroup.Item className="menu-item">
-          <ImFilesEmpty />
-          &nbsp; Record Sales
-        </ListGroup.Item>
-        <ListGroup.Item className="menu-item">
-          <FaMoneyBillWave />
-          &nbsp; Record Purchases
-        </ListGroup.Item>
+        <Link to="/sales">
+          <ListGroup.Item
+            className={isCurrentPath("/sales")}
+            onClick={handleClose}
+          >
+            <ImFilesEmpty />
+            &nbsp; Record Sales
+          </ListGroup.Item>
+        </Link>
+        <Link to="/purchases">
+          <ListGroup.Item
+            className={isCurrentPath("/purchases")}
+            onClick={handleClose}
+          >
+            <FaMoneyBillWave />
+            &nbsp; Record Purchases
+          </ListGroup.Item>
+        </Link>
         <ListGroup.Item
           className="menu-item display-flex"
           onClick={() => setOpen(!open)}
@@ -70,13 +82,13 @@ const MenuItems = ({ handleClose }) => {
         </ListGroup.Item>
         <Collapse in={open}>
           <ListGroup className="menu-setting">
-            <Link to="/license">
+            <Link to="/licence">
               {" "}
               <ListGroup.Item
-                className={isCurrentPathSettings("/license")}
+                className={isCurrentPathSettings("/licence")}
                 onClick={handleClose}
               >
-                License
+                Licence
               </ListGroup.Item>
             </Link>
             <Link to="/practice">
@@ -111,12 +123,25 @@ const MenuItems = ({ handleClose }) => {
                 Configuration
               </ListGroup.Item>
             </Link>
+            <Link to="/add-contact">
+              <ListGroup.Item
+                className={isCurrentPathSettings("/add-contact")}
+                onClick={handleClose}
+              >
+                Add Contact
+              </ListGroup.Item>
+            </Link>
           </ListGroup>
         </Collapse>
-        <ListGroup.Item className="menu-item">
-          <MdOutlineSupportAgent />
-          &nbsp; Support
-        </ListGroup.Item>
+        <Link to="/support">
+          <ListGroup.Item
+            className={isCurrentPath("/support")}
+            onClick={handleClose}
+          >
+            <MdOutlineSupportAgent />
+            &nbsp; Support
+          </ListGroup.Item>
+        </Link>
         <Link to="/personal-details">
           <ListGroup.Item
             className={isCurrentPath("/personal-details")}
@@ -130,6 +155,61 @@ const MenuItems = ({ handleClose }) => {
           <ListGroup.Item className="menu-item" onClick={handleClose}>
             <RiFolderUserLine />
             &nbsp; Login
+          </ListGroup.Item>
+        </Link>
+        <Link to="/terms-of-services">
+          <ListGroup.Item
+            className={isCurrentPath("/terms-of-services")}
+            onClick={handleClose}
+          >
+            <RiFolderUserLine />
+            &nbsp; Terms of Services
+          </ListGroup.Item>
+        </Link>
+        <Link to="/business-detail">
+          <ListGroup.Item
+            className={isCurrentPath("/business-detail")}
+            onClick={handleClose}
+          >
+            <RiFolderUserLine />
+            &nbsp; Business Details
+          </ListGroup.Item>
+        </Link>
+        <Link to="/HMRC-authenticate">
+          <ListGroup.Item
+            className={isCurrentPath("/HMRC-authenticate")}
+            onClick={handleClose}
+          >
+            <div className="d-flex align-items-center">
+              <div>
+                <RiFolderUserLine />
+                &nbsp;
+              </div>
+              <div> &nbsp;HMRC Authentication</div>
+            </div>
+          </ListGroup.Item>
+        </Link>
+        <Link to="/authentication-code">
+          <ListGroup.Item
+            className={isCurrentPath("/authentication-code")}
+            onClick={handleClose}
+          >
+            <div className="d-flex align-items-center">
+              <div>
+                <RiFolderUserLine />
+                &nbsp;
+              </div>
+              <div>&nbsp;Authentication Code</div>
+            </div>
+          </ListGroup.Item>
+        </Link>
+        <Link to="/vat-return">
+          <ListGroup.Item
+            className={isCurrentPath("/vat-return")}
+            onClick={handleClose}
+          >
+            <RiFolderUserLine />
+            &nbsp; VAT Return
           </ListGroup.Item>
         </Link>
       </ListGroup>

@@ -12,15 +12,18 @@ import {
   Form,
 } from "react-bootstrap";
 import PageTitle from "../../components/PageTitle";
+import { Link } from "react-router-dom";
 
 const EmailPreferences = () => {
   return (
-    <Container fluid>
+    <Container fluid >
       <div className="header-wi-breadcrumb mb-2">
         <PageTitle title="Email Preferences" />
         <div>
           <Breadcrumb>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Link to="/">Home</Link>
+            </Breadcrumb.Item>
             <Breadcrumb.Item active>Email Preferences</Breadcrumb.Item>
           </Breadcrumb>
         </div>

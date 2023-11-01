@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../assets/scss/auth/login.scss";
 import {
   Button,
@@ -9,11 +9,14 @@ import {
   Image,
   Row,
 } from "react-bootstrap";
-import { loginLogo } from "../../assets/images";
+import { loginLogo, tooltip } from "../../assets/images";
 import FromInput from "../../components/Input";
 import ReCAPTCHA from "react-google-recaptcha";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 const Registration = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConPassword, setShowConPassword] = useState(false);
   return (
     <Container className="registration-container">
       <div className="biger-cricle">
@@ -26,42 +29,112 @@ const Registration = () => {
             <Card.Body>
               <Form>
                 <div className="mb-3">
-                  <Form.Label>I want to register as</Form.Label>
+                  <Form.Label>
+                    I want to register as
+                    <span style={{ verticalAlign: "super" }}>{tooltip}</span>
+                  </Form.Label>
                   <Form.Select defaultValue="Choose...">
                     <option>An Accountant</option>
                     <option>As a Multi Business</option>
                   </Form.Select>
                 </div>
                 <div className="mb-3">
-                  <FromInput label="Email*" type="text" />
+                  <FromInput
+                    label={
+                      <div>
+                        Email
+                        <span style={{ verticalAlign: "super" }}>
+                          {tooltip}
+                        </span>
+                      </div>
+                    }
+                    type="text"
+                  />
                 </div>
                 <div className="mb-3">
-                  <FromInput label="Password*" type="Password" />
+                  <Form.Label className="display-inline-block">
+                    Password<span>{tooltip}</span>
+                  </Form.Label>
+                  <div className="relative-div">
+                    <Form.Control type={showPassword ? "text" : "password"} />
+                    <div
+                      className="copy-icon"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? (
+                        <AiOutlineEye role="button" />
+                      ) : (
+                        <AiOutlineEyeInvisible role="button" />
+                      )}
+                    </div>
+                  </div>
                 </div>
                 <div className="mb-3">
-                  <FromInput label="Confirm Password*" type="Password" />
+                  <Form.Label className="display-inline-block">
+                    Confirm Password<span>{tooltip}</span>
+                  </Form.Label>
+                  <div className="relative-div">
+                    <Form.Control
+                      type={showConPassword ? "text" : "password"}
+                    />
+                    <div
+                      className="copy-icon"
+                      onClick={() => setShowConPassword(!showConPassword)}
+                    >
+                      {showConPassword ? (
+                        <AiOutlineEye role="button" />
+                      ) : (
+                        <AiOutlineEyeInvisible role="button" />
+                      )}
+                    </div>
+                  </div>
                 </div>
                 <div className="mb-3">
-                  <FromInput label="Contact Name*" type="text" />
+                  <FromInput
+                    label={
+                      <div>
+                        Contact Name
+                        <span style={{ verticalAlign: "super" }}>
+                          {tooltip}
+                        </span>
+                      </div>
+                    }
+                    type="text"
+                  />
                 </div>
                 <div className="mb-3">
-                  <FromInput label="Contact Number*" type="number" />
+                  <FromInput
+                    label={
+                      <div>
+                        Contact Number
+                        <span style={{ verticalAlign: "super" }}>
+                          {tooltip}
+                        </span>
+                      </div>
+                    }
+                    type="number"
+                  />
                 </div>
-                <div className="mb-3">
-                  <FromInput label="Contact Number*" type="number" />
-                </div>
+             
                 <div className="mb-3">
                   <Form.Group id="formGridCheckbox">
                     <Form.Check
                       type="checkbox"
-                      label="I have read the Terms of Services"
+                      label={
+                        <div style={{ marginTop: "-4px" }}>
+                          I have read the Terms of Services
+                          <span style={{ verticalAlign: "super" }}>
+                            {tooltip}
+                          </span>
+                        </div>
+                      }
                     />
                   </Form.Group>
                 </div>
                 <div className="mb-3">
                   <ReCAPTCHA sitekey="Your client site key" />
                 </div>
-                <Row>
+                <Row className="flex-md-row flex-column-reverse">
                   <Col lg={6} className="mb-3">
                     <Button className="cancel-button">Cancel</Button>
                   </Col>

@@ -10,22 +10,22 @@ const Liabilities = () => {
         <Table responsive className="dashboard-table mb-2" size="sm">
           <thead>
             <tr>
-              <th>S.No</th>
-              <th className="text-end"> 
+              <th className="width-th-sr">S.No</th>
+              <th className="text-end width-th-date">
                 Start Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 End Date <span>↑↓</span>{" "}
               </th>
-              <th>
+              <th className="width-th-label px-4">
                 Details <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 {" "}
                 Due Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end"> Original Amount</th>
-              <th className="text-end">Outstanding Amount</th>
+              <th className="text-end width-th-date"> Original Amount</th>
+              <th className="text-end width-th-date">Outstanding Amount</th>
             </tr>
           </thead>
           <tbody>
@@ -34,7 +34,7 @@ const Liabilities = () => {
                 <td>{i}.</td>
                 <td className="text-end">12-01-2023</td>
                 <td className="text-end">18-01-2023</td>
-                <td>Lorem Ipsum...</td>
+                <td className="px-4">Lorem Ipsum...</td>
                 <td className="text-end">12-01-2023</td>
                 <td className="text-end">15,200/-</td>
                 <td className="text-end">16,200/-</td>

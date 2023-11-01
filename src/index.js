@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import { ThemeProvider } from "./context/themeContext";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
@@ -27,7 +28,9 @@ root.render(
         />
       }
     >
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </Suspense>
   </React.StrictMode>
 );

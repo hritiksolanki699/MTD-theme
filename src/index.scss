@@ -1,16 +1,35 @@
 $background-color: #f5f5f5;
+$darkBackground-color: #181924;
 $font-color: #6c757d;
+$font-color-dark: #e3e3e4;
 $Soft-blue: #727cf5;
 $cyan: #39afd1;
+
+@font-face {
+  font-family: "NotoColorEmoji";
+  src: url("../src/fonts/NotoColorEmoji-Regular.ttf");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../src/fonts/Segoe\ UI.ttf");
+}
+@font-face {
+  font-family: "ARIAL";
+  src: url("../src/fonts/ARIAL.TTF");
+}
+@font-face {
+  font-family: "seguiemj";
+  src: url("../src/fonts/seguiemj.ttf");
+}
 
 body {
   margin: 0;
   /* padding: 20px 40px; */
-  font-family: "Nunito", sans-serif;
+  font-family: "Segoe UI", "seguiemj", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $background-color;
-  color: $font-color;
+  // color: $font-color;
 }
 
 .padding-20px {
@@ -46,10 +65,16 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
 .header-wi-breadcrumb {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
   .breadcrumb-item + .breadcrumb-item::before {
     content: var(--bs-breadcrumb-divider, ">") !important;
   }
@@ -110,6 +135,58 @@ table th {
 .nav-justified .nav-item .nav-link {
   color: $Soft-blue;
   border: 1px solid #e3e3e3;
+}
+
+.form-check-input:checked {
+  background-color: #39afd1;
+}
+
+.relative-div {
+  position: relative;
+  .copy-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 18px;
+  }
+}
+
+.display-inline-block {
+  display: inline-block;
+  span {
+    vertical-align: super;
+  }
+}
+
+.width-th-date {
+  width: 122px;
+}
+.width-th-label {
+  width: 150px;
+}
+
+.width-th-name {
+  width: 180px;
+}
+
+.width-th-sr {
+  width: 50px;
+}
+
+.width-250px {
+  width: 230px;
+}
+
+.padding-top-40px {
+  padding-top: 40px;
+}
+
+.hover-item {
+  color: "#6c757d";
+}
+.hover-item:hover {
+  background-color: #f7f7f7;
 }
 
 @media only screen and (max-width: 768px) {

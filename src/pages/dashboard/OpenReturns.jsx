@@ -11,26 +11,26 @@ const OpenReturns = () => {
         <Table responsive className="dashboard-table mb-2" size="sm">
           <thead>
             <tr>
-              <th>S.No</th>
-              <th className="text-end">
+              <th className="width-th-sr">S.No</th>
+              <th className="text-end width-th-date">
                 Start Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 End Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 {" "}
                 Due Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 Received Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-center">
+              <th className="text-center width-th-label">
                 {" "}
                 Status <span>↑↓</span>{" "}
               </th>
-              <th className="text-center">Already Filed</th>
-              <th className="text-center">File Return</th>
+              <th className="text-center width-th-date">Already Filed</th>
+              <th className="text-center width-th-date">File Return</th>
             </tr>
           </thead>
           <tbody>
@@ -41,16 +41,16 @@ const OpenReturns = () => {
                 <td className="text-end">18-01-2023</td>
                 <td className="text-end">15-01-2023</td>
                 <td className="text-end">12-01-2023</td>
-                <td>
+                <td className="text-center d-flex justify-content-center">
                   {" "}
-                  <div className="active-label text-center">Active</div>
+                  <div className="active-label  width-th-date">Active</div>
                 </td>
                 <td className="text-center">
                   {" "}
                   <Form.Check type="checkbox" />
                 </td>
                 <td className="text-center icon-soft-blue">
-                  <VscNewFile />
+                  <VscNewFile role="button" />
                 </td>
               </tr>
             ))}

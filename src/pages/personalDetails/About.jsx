@@ -16,31 +16,31 @@ const About = () => {
         centuries,
       </div>
       <Row className="mt-2">
-        <Col lg={4} md={6} className="icon-w-details mb-2">
+        <Col lg={4} md={6} className="icon-w-details width-250px mb-2">
           <span>
             <TbUserExclamation />
           </span>{" "}
           Michael A. Franklin
         </Col>
-        <Col lg={4} md={6} className="icon-w-details mb-2">
+        <Col lg={4} md={6} className="icon-w-details width-250px mb-2">
           <span>
             <MdOutlineWifiCalling3 />
           </span>{" "}
           (+12) 123 1234 567
         </Col>
-        <Col lg={4} md={6} className="icon-w-details mb-2">
+        <Col lg={4} md={6} className="icon-w-details width-250px mb-2">
           <span>
             <MdOutlineMail />
           </span>{" "}
           coderthemes@gmail.com
         </Col>
-        <Col lg={4} md={6} className="icon-w-details mb-2">
+        <Col lg={4} md={6} className="icon-w-details width-250px mb-2">
           <span>
             <BsFillPersonCheckFill />
           </span>{" "}
           Admin
         </Col>
-        <Col lg={4} md={6} className="icon-w-details mb-2">
+        <Col lg={4} md={6} className="icon-w-details width-250px mb-2">
           <span>
             <RiLockPasswordLine />
           </span>{" "}

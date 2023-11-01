@@ -14,15 +14,18 @@ import PageTitle from "../../components/PageTitle";
 import About from "./About";
 import AssignClient from "./AssignClient";
 import LeftProfile from "./LeftProfile";
+import { Link } from "react-router-dom";
 
 const PersonalDetails = () => {
   return (
-    <Container fluid>
+    <Container fluid >
       <div className="header-wi-breadcrumb mb-2">
         <PageTitle title="Personal Details" />
         <div>
           <Breadcrumb>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Link to="/">Home</Link>
+            </Breadcrumb.Item>
             <Breadcrumb.Item active>Personal Details</Breadcrumb.Item>
           </Breadcrumb>
         </div>

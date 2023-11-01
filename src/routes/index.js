@@ -1,8 +1,10 @@
 import React, { lazy } from "react";
+import Support from "../pages/support/Support";
 
 // Auth pages
 const Login = lazy(() => import("../pages/auth/Login"));
 const Registration = lazy(() => import("../pages/auth/Registration"));
+const ForgotPassword = lazy(() => import("../pages/auth/ForgotPassword"));
 
 // All other pages
 const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
@@ -20,10 +22,34 @@ const EmailPreferences = lazy(() =>
   import("../pages/settings/EmailPreferences")
 );
 const Configuration = lazy(() => import("../pages/settings/Configuration"));
+const AddContact = lazy(() => import("../pages/settings/AddContact"));
 const PersonalDetails = lazy(() =>
   import("../pages/personalDetails/PersonalDetails")
 );
 const EditProfile = lazy(() => import("../pages/personalDetails/EditProfile"));
+const TermsOfServices = lazy(() =>
+  import("../pages/termsOfServices/TermsOfServices")
+);
+const SingleBusinessDetail = lazy(() =>
+  import("../pages/singleBusiness/SIngleBusinessDetail")
+);
+const SingleBusinessDetailEdit = lazy(() =>
+  import("../pages/singleBusiness/SIngleBusinessDetailEdit")
+);
+const HMRCAuthenticate = lazy(() =>
+  import("../pages/HMRCAuthenticate/HMRCAuthenticate")
+);
+const AuthenticationCode = lazy(() =>
+  import("../pages/HMRCAuthenticate/AuthenticationCode")
+);
+const Transactions = lazy(() => import("../pages/transactions/Transactions"));
+const AddSalesTransaction = lazy(() =>
+  import("../pages/transactions/AddSalesTransaction")
+);
+const AddPurchaseTransaction = lazy(() =>
+  import("../pages/transactions/AddPurchaseTransaction")
+);
+const VatReturn = lazy(() => import("../pages/vatReturn/VatReturn"));
 
 const authRoutes = [
   {
@@ -36,6 +62,11 @@ const authRoutes = [
     name: "Registration",
     component: <Registration />,
   },
+  {
+    path: "/forgot-password",
+    name: "Forgot Password",
+    component: <ForgotPassword />,
+  },
 ];
 
 const pagesRoutes = [
@@ -46,7 +77,7 @@ const pagesRoutes = [
     index: true,
   },
   {
-    path: "/dashboard",
+    path: "/open-return",
     name: "Dashboard",
     component: <UserDashboard />,
     index: false,
@@ -64,7 +95,7 @@ const pagesRoutes = [
     index: false,
   },
   {
-    path: "/license",
+    path: "/licence",
     name: "License",
     component: <License />,
     index: false,
@@ -106,6 +137,12 @@ const pagesRoutes = [
     index: false,
   },
   {
+    path: "/add-contact",
+    name: "Add Contact",
+    component: <AddContact />,
+    index: false,
+  },
+  {
     path: "/personal-details",
     name: "Personal Details",
     component: <PersonalDetails />,
@@ -115,6 +152,72 @@ const pagesRoutes = [
     path: "/edit-profile",
     name: "Edit Profile",
     component: <EditProfile />,
+    index: false,
+  },
+  {
+    path: "/terms-of-services",
+    name: "Terms Of Services",
+    component: <TermsOfServices />,
+    index: false,
+  },
+  {
+    path: "/business-detail",
+    name: "Single Business Detail",
+    component: <SingleBusinessDetail />,
+    index: false,
+  },
+  {
+    path: "/edit-business-details",
+    name: "Single Business Detail Edit",
+    component: <SingleBusinessDetailEdit />,
+    index: false,
+  },
+  {
+    path: "/HMRC-authenticate",
+    name: "HMRC Authenticate",
+    component: <HMRCAuthenticate />,
+    index: false,
+  },
+  {
+    path: "/authentication-code",
+    name: "Authentication Code",
+    component: <AuthenticationCode />,
+    index: false,
+  },
+  {
+    path: "/sales",
+    name: "Transactions",
+    component: <Transactions />,
+    index: false,
+  },
+  {
+    path: "/purchases",
+    name: "Transactions",
+    component: <Transactions />,
+    index: false,
+  },
+  {
+    path: "/add-purchase-transaction",
+    name: "Add Purchase Transaction",
+    component: <AddPurchaseTransaction />,
+    index: false,
+  },
+  {
+    path: "/add-sales-transaction",
+    name: "Add Sales Transaction",
+    component: <AddSalesTransaction />,
+    index: false,
+  },
+  {
+    path: "/vat-return",
+    name: "VAT Return",
+    component: <VatReturn />,
+    index: false,
+  },
+  {
+    path: "/support",
+    name: "Support",
+    component: <Support />,
     index: false,
   },
 ];

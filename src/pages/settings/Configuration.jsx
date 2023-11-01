@@ -9,12 +9,14 @@ import { MdEditCalendar } from "react-icons/md";
 
 const Configuration = () => {
   return (
-    <Container fluid>
+    <Container fluid >
       <div className="header-wi-breadcrumb mb-2">
         <PageTitle title="Configuration" />
         <div>
           <Breadcrumb>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Link to="/">Home</Link>
+            </Breadcrumb.Item>
             <Breadcrumb.Item active>Configuration</Breadcrumb.Item>
           </Breadcrumb>
         </div>
@@ -36,10 +38,10 @@ const Configuration = () => {
           <Table responsive className="clients-list-table mb-2">
             <thead>
               <tr>
-                <th className="text-center">VAT code</th>
-                <th>Type</th>
-                <th className="text-center">Tax Rate</th>
-                <th className="text-center">Action</th>
+                <th className="text-center width-th-label">VAT code</th>
+                <th className="width-th-label">Type</th>
+                <th className="text-center width-th-label">Tax Rate</th>
+                <th className="text-center width-th-label">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -49,7 +51,7 @@ const Configuration = () => {
                 <td className="text-center">20%</td>
                 <td className="text-center">
                   <div>
-                    <MdEditCalendar />
+                    <MdEditCalendar role="button" />
                   </div>
                 </td>
               </tr>
@@ -59,7 +61,7 @@ const Configuration = () => {
                 <td className="text-center">5%</td>
                 <td className="text-center">
                   <div>
-                    <MdEditCalendar />
+                    <MdEditCalendar role="button" />
                   </div>
                 </td>
               </tr>
@@ -69,7 +71,7 @@ const Configuration = () => {
                 <td className="text-center">0%</td>
                 <td className="text-center">
                   <div>
-                    <MdEditCalendar />
+                    <MdEditCalendar role="button" />
                   </div>
                 </td>
               </tr>
@@ -79,7 +81,7 @@ const Configuration = () => {
                 <td className="text-center">Manual Entry</td>
                 <td className="text-center">
                   <div>
-                    <MdEditCalendar />
+                    <MdEditCalendar role="button" />
                   </div>
                 </td>
               </tr>
@@ -89,7 +91,7 @@ const Configuration = () => {
                 <td className="text-center">Gray Out VAT</td>
                 <td className="text-center">
                   <div>
-                    <MdEditCalendar />
+                    <MdEditCalendar role="button" />
                   </div>
                 </td>
               </tr>
@@ -99,7 +101,7 @@ const Configuration = () => {
                 <td className="text-center">0%</td>
                 <td className="text-center">
                   <div>
-                    <MdEditCalendar />
+                    <MdEditCalendar role="button" />
                   </div>
                 </td>
               </tr>

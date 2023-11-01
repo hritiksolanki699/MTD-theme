@@ -11,25 +11,25 @@ const ReturnHistory = () => {
         <Table responsive className="dashboard-table mb-2" size="sm">
           <thead>
             <tr>
-              <th>S.No</th>
-              <th className="text-end">
+              <th className="width-th-sr">S.No</th>
+              <th className="text-end width-th-date">
                 Start Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 End Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 {" "}
                 Due Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-end">
+              <th className="text-end width-th-date">
                 Received Date <span>↑↓</span>{" "}
               </th>
-              <th className="text-center">
+              <th className="text-center width-th-date">
                 {" "}
                 Status <span>↑↓</span>{" "}
               </th>
-              <th className="text-center">Action</th>
+              <th className="text-center width-th-date">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -40,11 +40,12 @@ const ReturnHistory = () => {
                 <td className="text-end">18-01-2023</td>
                 <td className="text-end">15-01-2023</td>
                 <td className="text-end">12-01-2023</td>
-                <td>
-                  <div className="active-label text-center">Active</div>
+                <td className="text-center d-flex justify-content-center">
+                  {" "}
+                  <div className="active-label  width-th-date">Active</div>
                 </td>
                 <td className="text-center">
-                  <MdRemoveRedEye />
+                  <MdRemoveRedEye role="button" />
                 </td>
               </tr>
             ))}

@@ -7,12 +7,14 @@ import { Link } from "react-router-dom";
 
 const PracticeDetails = () => {
   return (
-    <Container fluid>
+    <Container fluid >
       <div className="header-wi-breadcrumb mb-2">
         <PageTitle title="Practice Details" />
         <div>
           <Breadcrumb>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Link to="/">Home</Link>
+            </Breadcrumb.Item>
             <Breadcrumb.Item active>Practice Details</Breadcrumb.Item>
           </Breadcrumb>
         </div>

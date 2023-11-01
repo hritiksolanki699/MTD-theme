@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card } from "react-bootstrap";
 import ReactApexChart from "react-apexcharts";
+import { ThemeContext } from "../context/themeContext";
 
 const BarChart = () => {
+  const { selectedTheme } = useContext(ThemeContext);
   const chartSeries = [
     {
       name: "PRODUCT A",
@@ -50,6 +52,7 @@ const BarChart = () => {
             style: {
               fontSize: "13px",
               fontWeight: 400,
+              colors: selectedTheme === "light" ? ["#ffffff"] : ["#6c757d"],
             },
           },
         },
@@ -71,10 +74,28 @@ const BarChart = () => {
         "Nov",
         "Dec",
       ],
+      labels: {
+        show: true,
+        style: {
+          colors: selectedTheme === "light" ? "#6c757d" : "#ffffff",
+        },
+      },
+    },
+    yaxis: {
+      labels: {
+        show: true,
+        style: {
+          colors: selectedTheme === "light" ? "#6c757d" : "#ffffff",
+        },
+      },
     },
     legend: {
       position: "right",
       offsetY: 40,
+      labels: {
+        colors: selectedTheme === "light" ? "#6c757d" : "#ffffff",
+        useSeriesColors: false,
+      },
     },
     fill: {
       opacity: 1,
@@ -83,7 +104,9 @@ const BarChart = () => {
   return (
     <Card>
       <Card.Body>
-        <p style={{fontWeight:"700", fontSize:"16px"}}>VAT Invoice per year</p>
+        <p style={{ fontWeight: "700", fontSize: "16px" }}>
+          VAT Invoice per year
+        </p>
         <ReactApexChart
           options={chartOptions}
           series={chartSeries}

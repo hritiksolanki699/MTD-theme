@@ -1,0 +1,67 @@
+.left-backward {
+  position: absolute;
+  left: 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.right-forward {
+  position: absolute;
+  right: 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.carousel-card {
+  margin: 0 20px;
+  background-color: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
+  .month {
+    font-size: 18px;
+  }
+  .states {
+    font-size: 12px;
+  }
+  .current {
+    color: #62b08b;
+  }
+}
+.carousel-card-complete {
+  margin: 0 20px;
+  background-color: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
+  border: 1px solid #727cf5;
+  .month {
+    font-size: 18px;
+  }
+  .states {
+    font-size: 12px;
+  }
+  .label {
+    background-color: #727cf5;
+    color: #fff;
+  }
+}
+
+.width-40per {
+  width: 40%;
+}
+
+.add-transaction-table{
+  color: #8391A2;
+}
+
+.border-right{
+  border-right: 1px solid #C6C6C6;
+}
+
+.table-header {
+  background-color: #eef2f7;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .width-40per {
+        width: 100%;
+      }
+}

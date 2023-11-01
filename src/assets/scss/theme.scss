@@ -1,0 +1,129 @@
+@import "./variables";
+
+.default-theme {
+  background-color: $background-color;
+  color: $font-color;
+}
+
+.dark-theme {
+  background-color: $darkBackground-color;
+  color: $font-color-dark;
+  .login-container,
+  .registration-container {
+    color: $font-color-dark;
+  }
+  .tems-service-div {
+    background-color: $dark-bg-layout;
+  }
+  .biger-cricle {
+    background-color: $darkBackground-color;
+    .small-cricle {
+      background-color: $darkBackground-color;
+    }
+  }
+  .pagination {
+    --bs-pagination-bg: $dark-bg-layout;
+  }
+  .card-body {
+    background-color: #24252f;
+  }
+  .top-navbar,
+  .left-sidebar {
+    background-color: $dark-bg-layout;
+  }
+
+  .menu {
+    .menu-active {
+      background-color: $dark-bg-layout;
+    }
+
+    .menu-item {
+      background-color: $dark-bg-layout;
+      color: $font-color !important;
+    }
+
+    .menu-item:hover {
+      background-color: #353640;
+      color: #fff !important;
+    }
+
+    .menu-setting {
+      .menu-item-inner {
+        background-color: $dark-bg-layout;
+        color: $font-color !important;
+      }
+      .menu-item-inner-active {
+        background-color: $dark-bg-layout;
+      }
+    }
+  }
+
+  .top-navbar .left .search-box .search-input,
+  .middle-div .search-box .search-input,
+  .form-select,
+  .form-control,
+  .gray-button,
+  .list-group-item,
+  .carousel-card-complete,
+  .carousel-card,
+  .top-navbar .left .search-box-sm .search-input,
+  .top-navbar .right .dropdown-name-email {
+    background-color: $dark-bg-layout;
+    color: $font-color-dark !important;
+  }
+  .carousel-card-complete,
+  .carousel-card {
+    box-shadow: 4px 4px 4px rgba(255, 245, 245, 0.1);
+  }
+  .dashboard-table thead,
+  .clients-list-table thead,
+  .parctice-card-header,
+  .table-header {
+    background-color: $darkBackground-color;
+    color: $font-color-dark !important;
+  }
+
+  .dashboard-table,
+  .clients-list-table,
+  a {
+    color: $font-color-dark !important;
+  }
+  .button-hover {
+    color: $font-color;
+  }
+
+  .accordion {
+    --bs-accordion-color: $font-color-dark;
+    --bs-accordion-bg: $darkBackground-color;
+    --bs-accordion-btn-color: $font-color-dark;
+  }
+  .apexcharts-menu.apexcharts-menu-open {
+    background-color: #24252f;
+  }
+  .apexcharts-menu-item:hover {
+    color: #24252f;
+  }
+
+  .page-link:hover {
+    color: $font-color-dark !important;
+    background-color: #181924;
+  }
+  .page-link {
+    background-color: #24252f;
+  }
+  .nav-tabs {
+    background-color: #24252f;
+  }
+  .apexcharts-tooltip {
+    color: #24252f;
+  }
+}
+
+.light-theme {
+  background-color: $background-color;
+  color: $font-color;
+}
+
+// @media only screen and (max-width: 992px) {
+
+// }

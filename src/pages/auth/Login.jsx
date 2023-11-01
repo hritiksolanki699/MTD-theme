@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../assets/scss/auth/login.scss";
 import { Button, Card, Container, Form, Image } from "react-bootstrap";
-import { loginLogo } from "../../assets/images";
+import { loginLogo, tooltip } from "../../assets/images";
 import FromInput from "../../components/Input";
 import { Link } from "react-router-dom";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <Container className="login-container">
       <div className="biger-cricle">
@@ -18,10 +20,35 @@ const Login = () => {
             <Card.Body>
               <Form>
                 <div className="mb-3">
-                  <FromInput label="Email / User ID*" type="text" />
+                  <FromInput
+                    label={
+                      <div>
+                        Email / User ID
+                        <span style={{ verticalAlign: "super" }}>
+                          {tooltip}
+                        </span>
+                      </div>
+                    }
+                    type="text"
+                  />
                 </div>
                 <div className="mb-3">
-                  <FromInput label="Password*" type="Password" />
+                  <Form.Label className="display-inline-block">
+                    Password<span>{tooltip}</span>
+                  </Form.Label>
+                  <div className="relative-div">
+                    <Form.Control type={showPassword ? "text" : "password"} />
+                    <div
+                      className="copy-icon"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? (
+                        <AiOutlineEye role="button" />
+                      ) : (
+                        <AiOutlineEyeInvisible role="button" />
+                      )}
+                    </div>
+                  </div>
                 </div>
                 <div className="mb-3">
                   <Button className="login-button">Login</Button>
@@ -30,7 +57,10 @@ const Login = () => {
                   <Link to="/registration">
                     <div className="text">Create Account</div>
                   </Link>
-                  <div className="text">Forgotten Password</div>
+                  <Link to="/forgot-password">
+                    {" "}
+                    <div className="text">Forgotten Password</div>
+                  </Link>
                 </div>
                 <div className="mb-3 p-3 tems-service-div">
                   By clicking Login, you accept the{" "}

@@ -12,7 +12,10 @@ const AssignClient = () => {
       <Table responsive className="clients-list-table mb-2">
         <thead>
           <tr>
-            <th></th>
+            <th className="text-center">
+              {" "}
+              <Form.Check type="checkbox" />
+            </th>
             <th>
               {" "}
               Client ID <span>↑↓</span>
@@ -31,7 +34,7 @@ const AssignClient = () => {
         <tbody>
           {[1, 2, 3, 4].map((i) => (
             <tr key={i}>
-              <td>
+              <td className="text-center">
                 <Form.Check type="checkbox" />
               </td>
               <td>mark001</td>
@@ -44,7 +47,7 @@ const AssignClient = () => {
               </td>
               <td className="text-center">
                 <div className="three-icons">
-                  <MdDelete />
+                  <MdDelete role="button" />
                 </div>
               </td>
             </tr>

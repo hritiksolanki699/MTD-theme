@@ -3,6 +3,7 @@ import "../assets/scss/layout/smallScreenSidebar.scss";
 import { Offcanvas, Image } from "react-bootstrap";
 import MenuItems from "./MenuItems";
 import { logo } from "../assets/images";
+import { Link } from "react-router-dom";
 
 const SmallScreenSidebar = ({ show, handleClose }) => {
   return (
@@ -12,9 +13,11 @@ const SmallScreenSidebar = ({ show, handleClose }) => {
       onHide={handleClose}
       closeButton
     >
-      <div className="logo-main">
-        <Image src={logo} width={160} />
-      </div>
+      <Link to="/" onClick={handleClose}>
+        <div className="logo-main">
+          <Image src={logo} width={160} />
+        </div>
+      </Link>
       <Offcanvas.Body>
         <MenuItems handleClose={handleClose} />
       </Offcanvas.Body>

@@ -42,6 +42,7 @@
         padding: 5px;
         font-size: 18px;
         color: $Soft-blue;
+        cursor: pointer;
       }
     }
     .search-box-sm {
@@ -63,6 +64,7 @@
     position: relative;
     .upgrade-button {
       background-color: $cyan;
+      width: 130px;
       border: none;
       font-size: 14px;
     }
@@ -87,6 +89,12 @@
       display: none;
     }
   }
+  .top-nav-desc {
+    padding: 0 8px;
+    span {
+      color: $cyan;
+    }
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -96,6 +104,22 @@
     .left {
       .hamburger-icon {
         display: block;
+      }
+    }
+    .right {
+      .name-email {
+        display: none;
+      }
+      .dropdown-name-email {
+        display: block;
+      }
+    }
+    .top-nav-desc {
+      display: none;
+    }
+    .top-nav-desc-small {
+      span {
+        color: $cyan;
       }
     }
   }
@@ -114,13 +138,6 @@
         display: block;
       }
     }
-    .right {
-      .name-email {
-        display: none;
-      }
-      .dropdown-name-email {
-        display: block;
-      }
-    }
+
   }
 }
